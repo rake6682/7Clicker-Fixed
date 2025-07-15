@@ -6,6 +6,9 @@ buildscript {
 }
 
 apply plugin: "java"
+apply plugin: "application"
+
+mainClassName = "com.ruffian7.sevenclicker.AutoClicker"
 
 group = project_Group
 version = project_Version
