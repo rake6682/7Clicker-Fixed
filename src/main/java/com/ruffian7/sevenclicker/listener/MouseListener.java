@@ -29,7 +29,6 @@ public class MouseListener implements NativeMouseListener {
 			}
 
 			if (event.getButton() == AutoClicker.button) {
-				AutoClicker.mousePos = event.getPoint();
 				AutoClicker.activated = true;
 				AutoClicker.lastTime = System.currentTimeMillis();
 			}

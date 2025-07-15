@@ -20,7 +20,6 @@ import com.ruffian7.sevenclicker.listener.*;
 public class AutoClicker extends Thread {
 
 	public static Robot robot;
-	public static Point mousePos;
 	public static ClickerGui gui = new ClickerGui();
 
 	public static boolean toggled = false;
@@ -43,6 +42,8 @@ public class AutoClicker extends Thread {
 
 		try {
 			robot = new Robot();
+			robot.setAutoDelay(0);  // Add this line
+    		robot.setAutoWaitForIdle(false);  // Add this line
 			GlobalScreen.registerNativeHook();
 			GlobalScreen.addNativeMouseListener(new MouseListener());
 			GlobalScreen.addNativeKeyListener(new KeyListener());
